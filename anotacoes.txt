@@ -1,0 +1,6 @@
+Array: 
+	Um array é uma estrutura de dados que organiza elementos indexados em sequencia na memória e que possuem a mesma tipagem. 
+	- estão em sequencia na memória
+	- mesma tipagem
+	- cada elemento possue seu próprio index
+	- tamanho fixo
