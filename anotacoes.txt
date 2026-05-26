@@ -4,3 +4,25 @@ Array:
 	- mesma tipagem
 	- cada elemento possue seu próprio index
 	- tamanho fixo
+	
+HashMap:
+	Um Hashmap, conhecido também como Dictionary, é uma estrutura de dados que armazena dados em uma combinação de chave e valor. Permite a adição, consulta e remoção de elementos muito rapidamente (idealmente o(1)) atráves  de uma função hash. 
+	
+	- Função Hash transforma a chave em um inteiro grande (hash code) e converte em um index para o array interno do hashMap. Por exemplo o resto da divisão do hashcode gerado com o tamanho do array (7654321 % 16 = 9). 
+	
+	- Resizing acontence quando o array interno começa a ficar muito grande, ele dobra o tamanho do array e faz o rehash de todos os elementos para o novo array. 
+
+
+Componente	Função
+Hash Function	Transforma chave → código hash
+Compressão	Converte hash → índice do array
+Colisão	Duas chaves no mesmo índice
+Encadeamento	Lista/árvore para resolver colisões
+Load Factor	Define quando redimensionar (padrão 0.75)
+Resizing	Dobra o array e rehash de todos elementos
+Threshold	Capacidade × load factor
+
+
+Esses mecanismos trabalham juntos para que o HashMap mantenha suas operações O(1) na prática, sendo uma das estruturas mais importantes e utilizadas na computação moderna.
+
+
