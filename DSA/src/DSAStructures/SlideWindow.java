@@ -1,4 +1,4 @@
-package frequencyMaps;
+package DSAStructures;
 
 import java.util.HashMap;
 import java.util.Map;

@@ -1,4 +1,4 @@
-package frequencyMaps;
+package DSAStructures;
 
 public class ExponentialSearch {
 

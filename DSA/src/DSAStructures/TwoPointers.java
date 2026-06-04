@@ -1,6 +1,4 @@
-package frequencyMaps;
-
-import java.util.Arrays;
+package DSAStructures;
 
 public class TwoPointers {
 

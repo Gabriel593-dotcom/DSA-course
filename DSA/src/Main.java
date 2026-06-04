@@ -1,7 +1,4 @@
-import frequencyMaps.BinarySearch;
-import frequencyMaps.FrequencyMap;
-import frequencyMaps.SlideWindow;
-import frequencyMaps.TwoPointers;
+import DSAStructures.*;
 
 import java.util.Arrays;
 
@@ -52,6 +49,14 @@ public class Main {
          * Time complexity: O(log n) - Exponential search has a logarithmic time complexity, as it effectively reduces the search space by half with each iteration, similar to binary search.
          */
         exponentialSearch();
+
+        /**
+         * Intersection of Two Arrays -
+         * tecnique used to solve problems involving finding the common elements between two arrays. This tecnique typically involves using a hash set to store the elements of one array and then iterating through the other array to check for common elements. The result is a new array that contains the unique common elements between the two input arrays.
+          spacial complexity: O(min(n, m)) - where n and m are the lengths of the two input arrays, as we need to store the elements of the smaller array in a hash set to efficiently check for common elements.
+         * Time complexity: O(n + m) - where n and m are the lengths of the two input arrays, as we need to iterate through both arrays once to build the hash set and then check for common elements, resulting in a linear time complexity.
+         */
+        intersectionArr();
     }
 
     private static void frequencyMaps() {
@@ -82,7 +87,18 @@ public class Main {
     private static void exponentialSearch() {
         int[] arr = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40};
         int target = 10;
-        int index = frequencyMaps.ExponentialSearch.findPosition(arr, target);
+        int index = DSAStructures.ExponentialSearch.findPosition(arr, target);
         System.out.println("Target found at index: " + index);
+    }
+
+    private static void intersectionArr() {
+        int[] arr1 = {4,9,5};
+        int[] arr2 = {9,4,9,8,4} ;
+
+        int[] result = ArrIntersection.intersection(arr1, arr2);
+
+        System.out.println("");
+        System.out.println("result");
+        Arrays.stream(result).forEach(System.out::println);
     }
 }
