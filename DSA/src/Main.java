@@ -57,6 +57,8 @@ public class Main {
          * Time complexity: O(n + m) - where n and m are the lengths of the two input arrays, as we need to iterate through both arrays once to build the hash set and then check for common elements, resulting in a linear time complexity.
          */
         intersectionArr();
+
+        sortedArr();
     }
 
     private static void frequencyMaps() {
@@ -100,5 +102,27 @@ public class Main {
         System.out.println("");
         System.out.println("result");
         Arrays.stream(result).forEach(System.out::println);
+    }
+
+    private static void sortedArr() {
+        SortedArr s_arr = SortedArr.newArr(10);
+        s_arr.add(2);
+        s_arr.add(3);
+        s_arr.add(4);
+        s_arr.add(10);
+        s_arr.add(4);
+        s_arr.add(14);
+        s_arr.add(4);
+        s_arr.add(48);
+        s_arr.add(49);
+        s_arr.add(9);
+        s_arr.print();
+
+        s_arr.delete(4);
+        s_arr.delete(4);
+        s_arr.delete(48);
+        s_arr.print();
+        System.out.println("target at index: " + s_arr.binarySearch(4));
+        System.out.println("target at index: " + s_arr.binarySearch(70));
     }
 }
