@@ -3,19 +3,19 @@ package DSAStructures;
 import java.util.HashMap;
 import java.util.Map;
 
-public class SortedArr {
+public class SortedArray {
 
     private int[] arr;
     private final int length;
     private Map<Integer, Integer> frequencyFirstOccurrency = new HashMap<>();
 
-    private SortedArr(int len) {
+    private SortedArray(int len) {
         length = len;
         arr = new int[len];
     }
 
-    public static SortedArr newArr(int len) {
-        return new SortedArr(len);
+    public static SortedArray newArr(int len) {
+        return new SortedArray(len);
     }
 
     //O(1 + N) = O(N)

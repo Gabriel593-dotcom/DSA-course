@@ -58,7 +58,15 @@ public class Main {
          */
         intersectionArr();
 
+        /**
+         * Sorted Array
+         */
         sortedArr();
+
+        /**
+         * Dynamic Array
+         */
+        dynamicArr();
     }
 
     private static void frequencyMaps() {
@@ -105,7 +113,7 @@ public class Main {
     }
 
     private static void sortedArr() {
-        SortedArr s_arr = SortedArr.newArr(10);
+        SortedArray s_arr = SortedArray.newArr(10);
         s_arr.add(2);
         s_arr.add(3);
         s_arr.add(4);
@@ -124,5 +132,34 @@ public class Main {
         s_arr.print();
         System.out.println("target at index: " + s_arr.binarySearch(4));
         System.out.println("target at index: " + s_arr.binarySearch(70));
+    }
+
+    private static void dynamicArr() {
+        System.out.println("\n\n\n");
+        System.out.println("Dynamic Array");
+        DynamicArray d_arr = new DynamicArray();
+
+        d_arr.add(2);
+        d_arr.add(3);
+        d_arr.add(4);
+        d_arr.add(10);
+        d_arr.add(4);
+        d_arr.add(14);
+        d_arr.add(4);
+        d_arr.add(48);
+        d_arr.add(49);
+        d_arr.add(9);
+
+        d_arr.delete(0);
+        d_arr.delete(0);
+        d_arr.delete(0);
+        d_arr.delete(0);
+        d_arr.delete(0);
+        d_arr.delete(0);
+
+        d_arr.print();
+        System.out.println("target at index: " + d_arr.search(4));
+        System.out.println("target at index: " + d_arr.search(70));
+        
     }
 }
