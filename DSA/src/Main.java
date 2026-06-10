@@ -1,4 +1,5 @@
 import DSAStructures.*;
+import DSAStructures.simplelinkedlist.SimpleLinkedList;
 
 import java.util.Arrays;
 
@@ -67,6 +68,8 @@ public class Main {
          * Dynamic Array
          */
         dynamicArr();
+
+        simpleLinkedList();
     }
 
     private static void frequencyMaps() {
@@ -161,5 +164,35 @@ public class Main {
         System.out.println("target at index: " + d_arr.search(4));
         System.out.println("target at index: " + d_arr.search(70));
         
+    }
+
+    private static void simpleLinkedList() {
+        System.out.println("\n\n\n");
+        System.out.println("Simple Linked List");
+        SimpleLinkedList<Integer> s_list = new SimpleLinkedList<>();
+        SimpleLinkedList<String> ss_list = new SimpleLinkedList<>();
+
+        s_list.add(1);
+        s_list.add(2);
+        s_list.add(3);
+        s_list.add(4);
+        s_list.add(5);
+        s_list.add(6);
+        s_list.add(7);
+        s_list.add(8);
+
+        ss_list.add("Ricardo");
+        ss_list.add("Gabriel");
+        ss_list.add("Joao");
+        ss_list.add("Maria");
+        ss_list.delete("Gabriel");
+        ss_list.delete("Maria");
+
+        System.out.println(s_list.size());
+        System.out.println(s_list.search(8));
+        //System.out.println(ss_list.search("Maria"));
+        System.out.println("\n\nLista ligada de nomes:");
+        ss_list.print();
+
     }
 }
